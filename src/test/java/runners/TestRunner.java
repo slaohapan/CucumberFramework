@@ -12,8 +12,8 @@ import io.cucumber.junit.CucumberOptions;
 		
 		features = "./src/test/resources/features",
 		glue = "step_definitions",
-		dryRun = false,
-		tags = "@SauceInvalidLogin"
+		dryRun = false, //true : generate test case, false
+		tags = "@DemoQADatePicker"
 		)
 
 public class TestRunner {
