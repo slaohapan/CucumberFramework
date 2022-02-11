@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "./src/test/resources/features",
 		glue = "step_definitions",
 		dryRun = false, //true : generate test case, false
-		tags = "@DemoQADatePicker"
+		tags = " @DemoAlert1"
 		)
 
 public class TestRunner {

@@ -11,54 +11,58 @@ import utilities.Driver;
 
 public class DemoQADatePickerPage {
 	
-	public DemoQADatePickerPage(){
+	public DemoQADatePickerPage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
-	
-	@FindBy (id = "datePickerMonthYearInput")
+
+	@FindBy(id = "datePickerMonthYearInput")
 	public WebElement firstDatePicker;
-	
-	@FindBy(css= ".react-datepicker__year-select")
+
+	@FindBy(css = ".react-datepicker__year-select")
 	public WebElement yearDropDown;
-	
-	@FindBy(css= ".react-datepicker__month-select")
+
+	@FindBy(css = ".react-datepicker__month-select")
 	public WebElement monthDropDown;
-	
-	@FindBy(css= ".react-datepicker__day")
+
+	@FindBy(css = ".react-datepicker__day")
 	public List<WebElement> days;
-	
+
 	BrowserUtils utils = new BrowserUtils();
-	
-	public void pickADate(String year, int month, String day) {
-		
+
+	int month;
+	String day = "";
+	String year;
+
+	public void pickADate(String date) {
+
+		String[] dates = date.split("/");
+		// turn the month into int
+		String monthOutOfArray = dates[0];
+		if (monthOutOfArray.contains("0")) {
+			month = Integer.parseInt(monthOutOfArray.substring(1));
+		} else {
+			month = Integer.parseInt(monthOutOfArray);
+		}
+
+		// get the date out of string array
+		if (dates[1].contains("0")) {
+			day = dates[1].substring(1);
+		} else {
+			day = dates[1];
+		}
+
+		// year from the string array
+		year = dates[2];
+
 		utils.selectByValue(yearDropDown, year);
-		utils.selectByIndex(monthDropDown, month);
-		
+		utils.selectByIndex(monthDropDown, month - 1);
+
 		for (WebElement webElement : days) {
-			if ( webElement.getText().equals(day)) {
+			if (webElement.getText().equals(day)) {
 				webElement.click();
 				break;
-				
 			}
 		}
-		
+
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-	
 }

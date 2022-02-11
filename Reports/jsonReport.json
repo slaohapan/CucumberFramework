@@ -1,13 +1,13 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-02-05T20:41:39.631Z",
+        "start_timestamp": "2022-02-10T02:25:44.981Z",
         "before": [
           {
             "result": {
-              "duration": 3847752000,
+              "duration": 4769258000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "I should be able toselect a date from date picker",
+        "line": 18,
+        "name": "I am able to handle Alert",
         "description": "",
-        "id": "demo-qa-scenario;i-should-be-able-toselect-a-date-from-date-picker",
+        "id": "demoqa-is-a-good-website;i-am-able-to-handle-alert",
         "after": [
           {
             "result": {
-              "duration": 112786000,
+              "duration": 84247000,
               "status": "passed"
             },
             "match": {
@@ -35,65 +35,82 @@
         "steps": [
           {
             "result": {
-              "duration": 2838408000,
+              "duration": 4025357000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I am on the date picker page \"https://demoqa.com/date-picker\"",
+            "line": 19,
+            "name": "I am on the Alerts page \"https://demoqa.com/alerts\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"https://demoqa.com/date-picker\"",
-                  "offset": 29
+                  "val": "\"https://demoqa.com/alerts\"",
+                  "offset": 24
                 }
               ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_am_on_the_date_picker_page(java.lang.String)"
+              "location": "step_definitions.DemoQASteps.i_am_on_the_alerts_page(java.lang.String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 6444931000,
+              "duration": 135936000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I enter \"02/02/2006\" to date picker",
+            "line": 20,
+            "name": "I click on AlertButton element",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"02/02/2006\"",
-                  "offset": 8
-                }
-              ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_enter_to_date_picker(java.lang.String)"
+              "location": "step_definitions.DemoQASteps.i_click_on_alert_button_element()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 16980000,
+              "duration": 152053000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Date entered should be selected",
+            "line": 21,
+            "name": "I am able to accept the Alert",
             "match": {
-              "location": "step_definitions.DemoQADatePickerSteps.date_entered_should_be_selected()"
+              "location": "step_definitions.DemoQASteps.i_am_able_to_accept_the_alert()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@DemoQADatePicker"
+            "name": "@Regression"
+          },
+          {
+            "name": "@DemoQATests"
+          },
+          {
+            "name": "@DemoAlert1"
           }
         ]
       }
     ],
-    "name": "Demo QA Scenario",
-    "description": "  \t\t   I want to practice different scenarios on Demo QA",
-    "id": "demo-qa-scenario",
+    "name": "DemoQA is a good website",
+    "description": "  Allows us to practice our skills with test automatation",
+    "id": "demoqa-is-a-good-website",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/DemoQADatePicker.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/DemoQA.feature",
+    "tags": [
+      {
+        "name": "@Regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@DemoQATests",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 13
+        }
+      }
+    ]
   }
 ]
