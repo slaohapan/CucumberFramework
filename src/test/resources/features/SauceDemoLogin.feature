@@ -1,3 +1,4 @@
+@Regression
 Feature: Sauce Demo Login
        This feature focus on positive and negative
     	 log in
@@ -31,5 +32,3 @@ Feature: Sauce Demo Login
       | Standard_user | secret_invalid |
       | Standard      | Standard===    |
       | Standard123   | Standard652    |
-      
-      
